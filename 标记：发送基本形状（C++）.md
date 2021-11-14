@@ -4,7 +4,7 @@
 
 1.展示如何使用[可视化信息/标记](http://docs.ros.org/en/api/visualization_msgs/html/msg/Marker.html)消息将基本形状（立方体、球体、圆柱体、箭头）发送到 rviz
 
-2.标记显示可在rviz中可视化数据，无需rviz了解有关解释该数据的任何信息。相反，原始对象通过[visualization_msgs/Marker](http://docs.ros.org/en/api/visualization_msgs/html/msg/Marker.html)消息发送到显示器，让您可以显示箭头、框、球体和线条等内容。
+2.标记显示可在rviz中可视化数据，无需rviz了解有关解释该数据的任何信息。相反，原始对象通过[visualization_msgs/Marker](http://docs.ros.org/en/api/visualization_msgs/html/msg/Marker.html)消息发送到显示器，显示箭头、框、球体和线条等内容。
 
 3.创建一个程序，每秒发送一个新标记，用不同的形状替换最后一个。
 
@@ -227,7 +227,7 @@ int main( int argc, char** argv )
       p.z += 1.0;
       line_list.points.push_back(p);
     }
-    //我们使用正弦和余弦来生成螺旋线。点标记和线带标记都只需要每个顶点一个点，而线列表标记需要2个点。
+    //使用正弦和余弦来生成螺旋线。点标记和线带标记都只需要每个顶点一个点，而线列表标记需要2个点。
 
     marker_pub.publish(points);
     marker_pub.publish(line_strip);
